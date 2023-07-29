@@ -1,0 +1,13 @@
+version: '3.4'
+  
+x-disabled:
+  twitter_bot:
+    build:
+      context: .
+    profiles:
+      - donotstart
+    environment:
+      - FIREBASE_PROJECT_ID
+      - FIREBASE_PRIVATE_KEY
+      - FIREBASE_CLIENT_EMAIL
+      - TZ  
